@@ -10,6 +10,8 @@ import About from './About/About'
 import Profile from './Profile/Profile'
 import Page from './maps/Page'
 import Donate from './Donate/Donate'
+import StudentDashboard from './StudentDashboard/StudentDashboard'
+import InstructorDashboard from './InstructorDashboard/InstructorDashboard'
 
 function Router() {
     let {user}=useContext(CounterContext)
@@ -46,6 +48,14 @@ function Router() {
                 {
                     path:'/donate',
                     element:<Donate/>
+                },
+                {
+                    path:'/studentdashboard',
+                    element:<StudentDashboard/>
+                },
+                {
+                    path:'/instructordashboard',
+                    element:<InstructorDashboard/>
                 }
             ]
         }
