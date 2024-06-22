@@ -9,6 +9,7 @@ import Home from './Home/Home'
 import About from './About/About'
 import Profile from './Profile/Profile'
 import Page from './maps/Page'
+import Donate from './Donate/Donate'
 
 function Router() {
     let {user}=useContext(CounterContext)
@@ -41,6 +42,10 @@ function Router() {
                 {
                     path:'/maps',
                     element: <Page/>
+                },
+                {
+                    path:'/donate',
+                    element:<Donate/>
                 }
             ]
         }
