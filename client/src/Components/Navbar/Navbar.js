@@ -28,10 +28,10 @@ function Navbar() {
           </div>
           <div className='d-flex gap-5 text-dark'>
             <NavLink className='nav-link' to='/'><b className='fs-5'>Home</b></NavLink>
-            <NavLink className='nav-link' to='/about'><b className='fs-5'>About Us</b></NavLink>
             <NavLink className='nav-link' to='/donate'><b className='fs-5'>Donate Us</b></NavLink>
             <NavLink className='nav-link' to='/products'><b className='fs-5'>Our Products</b></NavLink>
             <NavLink className='nav-link' to='/volunteer'><b className='fs-5'>Volunteer Now</b></NavLink>
+            <NavLink className='nav-link' to='/about'><b className='fs-5'>About Us</b></NavLink>
           </div>
           <div>
             {
