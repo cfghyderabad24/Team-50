@@ -12,6 +12,9 @@ import Page from './maps/Page'
 import Donate from './Donate/Donate'
 import StudentDashboard from './StudentDashboard/StudentDashboard'
 import InstructorDashboard from './InstructorDashboard/InstructorDashboard'
+import Volunteer from '../Components/Volunteer/Volunteer'
+import Products from '../Components/Products/Products'
+import Product from "../Components/Product/Product";
 
 function Router() {
     let {user}=useContext(CounterContext)
@@ -56,6 +59,22 @@ function Router() {
                 {
                     path:'/instructordashboard',
                     element:<InstructorDashboard/>
+                },
+                {
+                    path:'/volunteer',
+                    element:<Volunteer/>
+                },
+                {
+                    path:'/products',
+                    element:<Products/>
+                },
+                {
+                    path: '/product',
+                    element: <Product/>
+                },
+                {
+                    path:'/volunteer',
+                    element:<Volunteer/>
                 }
             ]
         }

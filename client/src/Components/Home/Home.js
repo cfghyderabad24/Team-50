@@ -48,7 +48,7 @@ function Home() {
 
                 <section className="content-section text-center">
                     <h2>Contact Us</h2>
-                    <p>We'd love to hear from you! Reach out to us via the following methods:</p>
+                    <p className='text-black'>We'd love to hear from you! Reach out to us via the following methods:</p>
                     <ul>
                         <li>Email: contact@company.com</li>
                         <li>Phone: (123) 456-7890</li>

@@ -1,16 +1,19 @@
 import React from "react";
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 function Product() {
-  //   let { state } = useLocation();
-  let product = {
-    image: "https://i.ytimg.com/vi/SlfYTmUVgEQ/maxresdefault.jpg",
-    title: "Handmade bugs",
-    description:
-      "The Insects are handcrafted by our kids and can be pasted on a wall. They are sustainable as well as long living",
-    category: "Decoration",
-    price: 20,
-  };
-  console.log(product);
+    let { state } = useLocation();
+    console.log("state",state);
+    let product = state;
+    console.log(product)
+  // let product = {
+  //   image: "https://i.ytimg.com/vi/SlfYTmUVgEQ/maxresdefault.jpg",
+  //   title: "Handmade bugs",
+  //   description:
+  //     "The Insects are handcrafted by our kids and can be pasted on a wall. They are sustainable as well as long living",
+  //   category: "Decoration",
+  //   price: 20,
+  // };
+  // console.log(product);
 
   return (
     <div className="product">

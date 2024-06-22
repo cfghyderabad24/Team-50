@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Products.css";
 
 function Products() {
@@ -32,11 +32,12 @@ function Products() {
     },
   ]);
 
-  //   let navigate = useNavigate();
+    let navigate = useNavigate();
 
   function handleDetails(itemId) {
     let product = products.find((prod) => prod.id === itemId);
-    // navigate("/product", { state: product });
+    console.log(product)
+    navigate("/product", { state: product });
   }
 
   function handleSearch(searchEvent) {

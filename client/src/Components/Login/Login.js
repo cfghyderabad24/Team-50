@@ -143,7 +143,7 @@ function Login() {
     }
 
     return (
-        <div style={{ paddingTop: '120px' }}>
+        <div style={{ paddingTop: '60px' }}>
             <div className='bg-white w-25 mx-auto p-3 rounded-4 shadow-lg'>
                 <h1 className='text-center text-primary mb-4'>LogIn</h1>
                 <form onSubmit={handleSubmit(onSigninFormSubmit)}>

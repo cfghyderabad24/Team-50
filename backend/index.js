@@ -106,6 +106,11 @@
 
 
 
+
+
+
+
+
 const express = require('express');
 const app = express();
 const jwt = require('jsonwebtoken');
@@ -123,6 +128,7 @@ MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
         app.set('studentsCollectionObj', db.collection('studentsCollection'));
         app.set('instructorsCollectionObj', db.collection('instructorsCollection'));
         app.set('evaluationsCollectionObj', db.collection('evaluationsCollection'));
+        app.set('volunteersCollectionObj', db.collection('volunteersCollection'));
         console.log('DB Connection success');
     })
     .catch(err => {
