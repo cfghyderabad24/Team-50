@@ -29,6 +29,7 @@ function Navbar() {
           <div className='d-flex gap-5 text-dark'>
             <NavLink className='nav-link' to='/'><b className='fs-5'>Home</b></NavLink>
             <NavLink className='nav-link' to='/about'><b className='fs-5'>About Us</b></NavLink>
+            <NavLink className='nav-link' to='/donate'><b className='fs-5'>Donate Us</b></NavLink>
           </div>
           <div>
             {

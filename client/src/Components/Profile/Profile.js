@@ -60,7 +60,6 @@ function Profile() {
                 </div>
                 <div className='profile-info'>
                     <h1>{user.firstname} {user.lastname}</h1>
-                    <h4>Content Writer</h4>
                     <h5><b>First Name: </b>{user.firstname}</h5>
                     <h5><b>Last Name: </b>{user.lastname}</h5>
                     <h5><b>Email: </b>{user.email}</h5>
