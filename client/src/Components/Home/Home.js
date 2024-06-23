@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';    
-import Education1 from '../../Assets/Education1.png';
+import Education1 from '../../Assets/Education1.png'
 import Education2 from '../../Assets/Education2.png';
 import Education3 from '../../Assets/Education3.png';
 import pic1 from '../../Assets/1.png';
@@ -12,6 +12,12 @@ import pic6 from '../../Assets/6.png';
 import pic7 from '../../Assets/7.png';
 import { GrNext, GrPrevious } from "react-icons/gr";
 import Testimonials from '../Testinomials/Testinomials';
+
+const textVariants = {
+  initial: { opacity: 0, y: -20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 1, ease: "easeInOut" }
+};
 
 function Home() {
     const events = [
@@ -106,9 +112,12 @@ function Home() {
                     </ul>
                     <p className='text-black'>Office Hours: 08:00 am - 06:00 pm (Sunday closed)</p>
                 </section>
-            </div>
+            </div> 
         </div>
     );
 }
 
 export default Home;
+
+
+
