@@ -8,8 +8,12 @@ import { CounterContext } from './CounterContext'
 import Home from './Home/Home'
 import About from './About/About'
 import Profile from './Profile/Profile'
-import Page from './maps/Page'
-import Dashboard from './Dashboard/Dashboard'      
+import Donate from './Donate/Donate'
+import StudentDashboard from './StudentDashboard/StudentDashboard'
+import InstructorDashboard from './InstructorDashboard/InstructorDashboard'
+import Volunteer from '../Components/Volunteer/Volunteer'
+import Products from '../Components/Products/Products'
+import Product from "../Components/Product/Product";
 
 function Router() {
     let {user}=useContext(CounterContext)
@@ -40,8 +44,32 @@ function Router() {
                     element: user ? <Profile/> : <div style={{display:"flex",height:"100vh", justifyContent:"center",alignItems:"center"}}>UnAuthorized</div>
                 },
                 {
-                    path:'/maps',
-                    element: <Page/>
+                    path:'/donate',
+                    element:<Donate/>
+                },
+                {
+                    path:'/studentdashboard',
+                    element:<StudentDashboard/>
+                },
+                {
+                    path:'/instructordashboard',
+                    element:<InstructorDashboard/>
+                },
+                {
+                    path:'/volunteer',
+                    element:<Volunteer/>
+                },
+                {
+                    path:'/products',
+                    element:<Products/>
+                },
+                {
+                    path: '/product',
+                    element: <Product/>
+                },
+                {
+                    path:'/volunteer',
+                    element:<Volunteer/>
                 }
             ]
         }
@@ -52,4 +80,4 @@ function Router() {
     </div>
   )
 }
-
+export default Router

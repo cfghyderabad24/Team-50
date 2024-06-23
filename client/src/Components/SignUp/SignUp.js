@@ -1,27 +1,30 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
+// src/Components/SignUp.js
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function SignUp() {
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const navigate = useNavigate();
 
-    let { register, handleSubmit, formState: { errors } } = useForm()
-    let navigate = useNavigate()
     async function onSignupFormSubmit(newUser) {
         try {
-            let res = await axios.post('http://localhost:4000/new-user', newUser)
+            const endpoint = newUser.userType === 'student' ? 'students' : 'instructors';
+            const res = await axios.post(`http://localhost:4000/${endpoint}`, newUser);
             if (res.data.message === 'user created') {
-                navigate('/login')
+                navigate('/login');
             } else {
-                alert(res.data.message)
+                alert(res.data.message);
             }
         } catch (error) {
-            alert('An error occured. Please try again later...')
+            alert('An error occurred. Please try again later...');
         }
     }
+
     return (
-        <div style={{marginTop:'60px'}}>
+        <div style={{ marginTop: '60px' }}>
             <div className='bg-white w-25 mx-auto p-3 rounded-4 shadow-lg'>
                 <h1 className='text-center text-primary mb-4'>SignUp</h1>
                 <form onSubmit={handleSubmit(onSignupFormSubmit)}>
@@ -33,16 +36,21 @@ function SignUp() {
                     {errors.email?.type === 'required' && <p style={{ marginTop: '-20px' }} className='text-danger text-center'>Email is required</p>}
                     <input type="password" {...register("password", { required: true, minLength: 6 })} id='password' className='form-control mb-4 shadow-sm' placeholder='Password' />
                     {errors.password?.type === 'required' && <p style={{ marginTop: '-20px' }} className='text-danger text-center'>Password is required</p>}
-                    {errors.password?.type === 'minLength' && <p style={{ marginTop: '-20px' }} className='text-danger text-center'>Password minimium Length is 6</p>}
+                    {errors.password?.type === 'minLength' && <p style={{ marginTop: '-20px' }} className='text-danger text-center'>Password minimum Length is 6</p>}
+                    <select {...register("userType", { required: true })} className='form-control mb-4 shadow-sm'>
+                        <option value="">Select User Type</option>
+                        <option value="student">Student</option>
+                        <option value="instructor">Instructor</option>
+                    </select>
+                    {errors.userType?.type === 'required' && <p style={{ marginTop: '-20px' }} className='text-danger text-center'>User Type is required</p>}
                     <div className='text-center'>
                         <button type='submit' className='btn btn-success'>Signup</button>
                     </div>
                 </form>
-                <p className='text-black text-center mt-3'>Already SignedUp ! <Link to='/login'>LogIn</Link> </p>
+                <p className='text-black text-center mt-3'>Already SignedUp! <Link to='/login'>LogIn</Link> </p>
             </div>
         </div>
-
-    )
+    );
 }
 
-export default SignUp
+export default SignUp;
