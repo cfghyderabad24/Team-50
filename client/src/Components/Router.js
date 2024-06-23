@@ -9,7 +9,7 @@ import Home from './Home/Home'
 import About from './About/About'
 import Profile from './Profile/Profile'
 import Page from './maps/Page'
-import Dashboard from './Dashboard/Dashboard'      
+     
 
 function Router() {
     let {user}=useContext(CounterContext)
@@ -53,3 +53,4 @@ function Router() {
   )
 }
 
+export default Router;
