@@ -1,52 +1,3 @@
-// import React from 'react';
-// import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-
-// const VolunteerPage = () => {
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     // Handle form submission here
-//   };
-
-//   return (
-//     <Container className="py-5">
-//       <Row>
-//         <Col>
-//           <h1>Volunteer with Us</h1>
-//           <p>We have various volunteering opportunities available. Fill out the form below to join us in making a difference.</p>
-//         </Col>
-//       </Row>
-//       <Row className="mt-4">
-//         <Col>
-//           <Form onSubmit={handleSubmit}>
-//             <Form.Group controlId="fullName">
-//               <Form.Label>Full Name</Form.Label>
-//               <Form.Control type="text" placeholder="Enter your full name" required />
-//             </Form.Group>
-//             <Form.Group controlId="email">
-//               <Form.Label>Email address</Form.Label>
-//               <Form.Control type="email" placeholder="Enter your email address" required />
-//             </Form.Group>
-//             <Form.Group controlId="phoneNumber">
-//               <Form.Label>Phone Number</Form.Label>
-//               <Form.Control type="tel" placeholder="Enter your phone number" required />
-//             </Form.Group>
-//             <Form.Group controlId="message">
-//               <Form.Label>Message (optional)</Form.Label>
-//               <Form.Control as="textarea" rows={3} placeholder="Enter a message" />
-//             </Form.Group>
-//             <Button variant="primary" type="submit">
-//               Submit
-//             </Button>
-//           </Form>
-//         </Col>
-//       </Row>
-//     </Container>
-//   );
-// };
-
-// export default VolunteerPage;
-
-
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
@@ -128,7 +79,7 @@ const VolunteerRegistration = () => {
                             />
                         </Form.Group>
                         {registrationMessage && <p className="text-success">{registrationMessage}</p>}
-                        <Button variant="primary" type="submit">
+                        <Button className='mt-3' variant="primary" type="submit">
                             Register
                         </Button>
                     </Form>

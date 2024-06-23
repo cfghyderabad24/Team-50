@@ -1,132 +1,3 @@
-// import React from "react";
-// import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import "./Products.css";
-
-// function Products() {
-//   let [search, setSearch] = useState("");
-//   let [products, setProducts] = useState([
-//     {
-//       image: "https://i.ytimg.com/vi/SlfYTmUVgEQ/maxresdefault.jpg",
-//       title: "Handmade bugs",
-//       description:
-//         "The Insects are handcrafted by our kids and can be pasted on a wall. They are sustainable as well as long living",
-//       category: "Decoration",
-//       price: 20,
-//     },
-//     {
-//       image: "https://i.ytimg.com/vi/SlfYTmUVgEQ/maxresdefault.jpg",
-//       title: "Handmade bugs",
-//       description:
-//         "The Insects are handcrafted by our kids and can be pasted on a wall. They are sustainable as well as long living",
-//       category: "Decoration",
-//       price: 20,
-//     },
-//     {
-//       image: "https://i.ytimg.com/vi/SlfYTmUVgEQ/maxresdefault.jpg",
-//       title: "Handmade bugs",
-//       description:
-//         "The Insects are handcrafted by our kids and can be pasted on a wall. They are sustainable as well as long living",
-//       category: "Decoration",
-//       price: 20,
-//     },
-//   ]);
-
-//     let navigate = useNavigate();
-
-//   function handleDetails(itemId) {
-//     let product = products.find((prod) => prod.id === itemId);
-//     console.log(product)
-//     navigate("/product", { state: product });
-//   }
-
-//   function handleSearch(searchEvent) {
-//     setSearch(searchEvent.target.value);
-//   }
-
-//   return (
-//     <div className="app-div">
-//       <div className="pt-3">
-//         <input
-//           type="text"
-//           className="form-control w-50 mx-auto Shadow fs-3 mb-3"
-//           placeholder="🔍Our Products"
-//           onChange={handleSearch}
-//         />
-//         {search === "" ? (
-//           <div className="row m-2">
-//             {
-//               //iterating through the products array
-//               products.map((item) => (
-//                 <div
-//                   key={item.id}
-//                   className="col-md-4 mb-4 d-grid justify-content-space-around"
-//                   style={{ minHeight: "50vh" }}
-//                 >
-//                   <div className="card Card bg-white p-3 Shadow">
-//                     <img
-//                       src={item.image}
-//                       className="card-img w-50"
-//                       alt={item.title}
-//                     />
-//                     <div className="card-body">
-//                       <h5 className="card-title">{item.title}</h5>
-//                       <h6>{item.category}</h6>
-//                     </div>
-//                     <div
-//                       className="btn details mx-auto"
-//                       onClick={() => handleDetails(item.id)}
-//                     >
-//                       Details
-//                     </div>
-//                   </div>
-//                 </div>
-//               ))
-//             }
-//           </div>
-//         ) : (
-//           <div className="row">
-//             {products.map(
-//               (item) =>
-//                 item.title.toLowerCase().includes(search.toLowerCase()) ===
-//                   true && (
-//                   <div
-//                     key={item.id}
-//                     className="col-md-4 mb-4 d-grid justify-content-space-around"
-//                     style={{ minHeight: "50vh" }}
-//                   >
-//                     <div className="card Card bg-white p-3 shadow">
-//                       <img
-//                         src={item.image}
-//                         className="card-img w-50"
-//                         alt={item.title}
-//                       />
-//                       <div className="card-body">
-//                         <h5 className="card-title">{item.title}</h5>
-//                       </div>
-//                       <div
-//                         className="btn details mx-auto"
-//                         onClick={() => handleDetails(item.id)}
-//                       >
-//                         Details
-//                       </div>
-//                     </div>
-//                   </div>
-//                 )
-//             )}
-//           </div>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Products;
-
-
-
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Products.css";
@@ -145,21 +16,21 @@ function Products() {
     },
     {
       id: 2,
-      image: "https://i.ytimg.com/vi/SlfYTmUVgEQ/maxresdefault.jpg",
-      title: "Handmade Bugs",
+      image: "https://5.imimg.com/data5/SELLER/Default/2023/7/321446208/QX/SP/ER/1801251/jute-flower-bags-500x500.png",
+      title: "Jute Bags",
       description:
-        "The Insects are handcrafted by our kids and can be pasted on a wall. They are sustainable as well as long living.",
-      category: "Decoration",
-      price: 20,
+        "The Jute Bags are handcrafted by our kids and can be pasted on a wall. They are sustainable as well as long living.",
+      category: "Bags",
+      price: 50,
     },
     {
       id: 3,
-      image: "https://i.ytimg.com/vi/SlfYTmUVgEQ/maxresdefault.jpg",
-      title: "Handmade Bugs",
+      image: "https://5.imimg.com/data5/BU/NG/MY-56064500/pottery-from-mud-handicraft-of-kutch.jpg",
+      title: "Pot",
       description:
-        "The Insects are handcrafted by our kids and can be pasted on a wall. They are sustainable as well as long living.",
+        "The Pot is handcrafted by our kids and can be pasted on a wall. They are sustainable as well as long living.",
       category: "Decoration",
-      price: 20,
+      price: 100,
     },
   ]);
 
@@ -179,7 +50,7 @@ function Products() {
       <div className="pt-3">
         <input
           type="text"
-          className="form-control w-50 mx-auto Shadow fs-3 mb-3"
+          className="form-control w-50 mx-auto Shadow fs-3 mb-5"
           placeholder="🔍Our Products"
           onChange={handleSearch}
         />
@@ -192,13 +63,13 @@ function Products() {
               <div
                 key={item.id}
                 className="col-md-4 mb-4 d-flex justify-content-center"
-                style={{ minHeight: "50vh" }}
               >
                 <div className="card Card bg-white p-3 Shadow">
                   <img
                     src={item.image}
                     className="card-img"
                     alt={item.title}
+                    style={{ width: '200px', height: '200px' }}
                   />
                   <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
