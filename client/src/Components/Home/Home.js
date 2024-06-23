@@ -3,6 +3,13 @@ import './Home.css';
 import Education1 from '../../Assets/Education1.png';
 import Education2 from '../../Assets/Education2.png';
 import Education3 from '../../Assets/Education3.png';
+import pic1 from '../../Assets/1.png';
+import pic2 from '../../Assets/2.png';
+import pic3 from '../../Assets/3.png';
+import pic4 from '../../Assets/4.png';
+import pic5 from '../../Assets/5.png';
+import pic6 from '../../Assets/6.png';
+import pic7 from '../../Assets/7.png';
 import { GrNext, GrPrevious } from "react-icons/gr";
 
 function Home() {
@@ -31,17 +38,16 @@ function Home() {
                 <section className="content-section text-center">
                     <h2 className='mb-5'>Meet Our Team</h2>
                     <div className="team-members">
-                        <div className="team-member">
-                            <h3>John Doe</h3>
-                            <p>CEO</p>
+                        <div className='d-flex gap-1'>
+                            <img style={{height:'400px'}} src={pic1} alt="" />
+                            <img style={{height:'400px'}} src={pic2} alt="" />
+                            <img style={{height:'400px'}} src={pic3} alt="" />
+                            <img style={{height:'400px'}} src={pic4} alt="" />
                         </div>
-                        <div className="team-member">
-                            <h3>Jane Smith</h3>
-                            <p>CTO</p>
-                        </div>
-                        <div className="team-member">
-                            <h3>Mike Johnson</h3>
-                            <p>COO</p>
+                        <div className='d-flex ms-5 mt-3 gap-1'>
+                            <img style={{height:'400px'}} src={pic5} alt="" />
+                            <img style={{height:'400px'}} src={pic6} alt="" />
+                            <img style={{height:'400px'}} src={pic7} alt="" />
                         </div>
                     </div>
                 </section>
@@ -50,10 +56,11 @@ function Home() {
                     <h2>Contact Us</h2>
                     <p className='text-black'>We'd love to hear from you! Reach out to us via the following methods:</p>
                     <ul>
-                        <li>Email: contact@company.com</li>
-                        <li>Phone: (123) 456-7890</li>
-                        <li>Address: 123 Company St, City, Country</li>
+                        <li>Email: director@subhiksha.org</li>
+                        <li>Phone: +91-9908076899, +91-9121104609</li>
+                        <li>Address: Plot No: 112, Road No: 3, Dhanalaxmi Colony, Mahendra Hills, East Marredpally, Secunderabad - 500026, Hyderabad, Telangana, India</li>
                     </ul>
+                    <p className='text-black'>Office Hours: 08:00 am - 06:00 pm (Sunday closed)</p>
                 </section>
             </div>
         </div>
